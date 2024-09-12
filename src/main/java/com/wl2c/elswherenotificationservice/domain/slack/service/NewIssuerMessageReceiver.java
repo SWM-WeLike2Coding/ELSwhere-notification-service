@@ -27,10 +27,10 @@ public class NewIssuerMessageReceiver {
         objectMapper.registerModule(new JavaTimeModule());
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         NewIssuerMessage newIssuerMessage = objectMapper.readValue(stringMessage, NewIssuerMessage.class);
-        log.info("new-ticker-alert Message Consumed : " + stringMessage);
+        log.info("new-issuer-alert Message Consumed : " + stringMessage);
 
         ResponseEntity<String> response = slackClient.sendAlert(createMessage(newIssuerMessage));
-        log.info("new-ticker-alert Response : " + response.getStatusCode());
+        log.info("new-issuer-alert Response : " + response.getStatusCode());
     }
 
     private RequestMessageDto createMessage(NewIssuerMessage newIssuerMessage) {
