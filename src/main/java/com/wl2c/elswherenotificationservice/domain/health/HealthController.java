@@ -1,4 +1,4 @@
-package com.wl2c.elswherenotificationservice.notification.controller;
+package com.wl2c.elswherenotificationservice.domain.health;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
