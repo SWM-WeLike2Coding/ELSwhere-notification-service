@@ -34,8 +34,6 @@ public class NewTickerMessageReceiver {
 
     private RequestMessageDto createMessage(NewTickerMessage newTickerMessage) {
         String stringBuilder = "새로운 티커 정보 반영 필요\n" +
-                "상품 ID : " +
-                newTickerMessage.getProductId() +
                 "\n\n" +
                 "상품명 : " +
                 newTickerMessage.getProductName() +
